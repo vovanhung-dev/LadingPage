@@ -110,9 +110,10 @@ const style = function () {
 
 // live browser loading
 const initBrowserSync = function (done) {
-    const startPath = "/index.html";
+    const startPath = "/";
+    const redirectPath = startPath === "/" ? "/index-2.html" : startPath;
     browsersync.init({
-        startPath: startPath,
+        startPath: redirectPath,
         server: {
             baseDir: paths.baseDist,
             middleware: [
