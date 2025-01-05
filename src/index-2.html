@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <title>KidSafe - Phần Mềm Bảo Vệ Trẻ Em</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="bảo vệ trẻ em, kiểm soát phụ huynh, quản lý thời gian sử dụng, giám sát từ xa, an toàn trên internet" name="description" />
+    <meta content="coderthemes" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+    <!--Material Icon -->
+    <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Style css -->
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Thêm link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Áp dụng font cho toàn bộ trang */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ============= Header Start ============= -->
+    <header id="navbar-sticky" class="header header-dark">
+        <div class="container">
+            <nav class="relative w-full mx-auto lg:flex lg:items-center lg:justify-between" aria-label="Global">
+                <div class="flex items-center justify-between">
+                    <a class="navbar-brand flex-none" href="#home">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class="h-6 logo-dark" alt="KidSafe Logo">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class="h-6 logo-light" alt="KidSafe Logo">
+                    </a><!-- end logo -->
+
+                    <div class="block lg:hidden">
+                        <button class="inline-flex ms-4 items-center justify-center h-9 w-12 rounded-md border border-gray-300 bg-slate-300/30" type="button" data-fc-target="collapse-target" data-fc-type="collapse">
+                            <i class="mdi mdi-menu text-2xl"></i>
+                        </button>
+                    </div> <!-- end mobile menu button -->
+                </div>
+                <div id="collapse-target" class="hidden overflow-hidden transition-all duration-300 basis-full grow lg:block">
+                    <ul id="navbar-navlist" class="navbar-nav flex flex-col gap-y-4 gap-x-0 lg:flex-row lg:items-center lg:justify-center lg:gap-y-0 lg:gap-x-7">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Tính Năng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#screenshots">Ảnh Chụp Màn Hình</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Ý Kiến Khách Hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Giá Cả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Liên Hệ</a>
+                        </li>
+                    </ul>
+                    <div class="lg:hidden block grow navbar-nav !mt-0">
+                        <button type="button" data-fc-target="login-modal" data-fc-type="modal" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 300px">Đăng Nhập</button>
+                        <a href="#" class="nav-btn">Đăng Ký</a>
+                    </div>
+                </div> <!-- end nav items -->
+                <div class="lg:flex gap-4 hidden grow navbar-nav">
+                    <button type="button" data-fc-target="login-modal" data-fc-type="modal" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 100px">Đăng Nhập</button>
+                    <a href="#" class="nav-btn" style="width: 100px">Đăng Ký</a>
+                </div><!-- end nav buttons -->
+            </nav><!-- end nav -->
+        </div>
+    </header>
+    <!-- ============= Header End ============= -->
+
+    <!-- home-kidsafe start -->
+    <section id="home" class="pt-32 pb-20" style="background-image: url('assets/images/heros/hero-2-bg.png');">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 items-center">
+                <div>
+                    <div class="w-16 h-16 rounded-full bg-blue-600/20 flex items-center justify-center">
+                        <i class="mdi mdi-shield-account text-3xl text-blue-600"></i>
+                    </div>
+                    <h1 class="md:text-5xl/snug text-3xl font-semibold mt-7">Bảo Vệ Trẻ Em với <span class="text-blue-600">KidSafe</span></h1>
+                    <p class="text-base font-normal text-gray-500 mt-5">Đảm bảo an toàn cho trẻ em trực tuyến với các tính năng kiểm soát và giám sát toàn diện của KidSafe.</p>
+                    <div class="mt-16 flex flex-wrap items-center gap-2">
+                        <a href="#" class="py-3 px-7 rounded-md text-base font-normal text-white border border-transparent bg-gradient-to-r from-primary to-blue-400 focus:text-black transition-all duration-500">Bắt Đầu Ngay</a>
+                        <a href="#" class="py-3 px-7 rounded-md text-base font-normal border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white hover:shadow-lg focus:text-black transition-all duration-500">Tìm Hiểu Thêm</a>
+                    </div>
+                </div><!-- end grid col -->
+
+                <div class="relative">
+                    <img src="assets/images/heros/hero-2-img.png" class="md:h-[700px] lg:ms-auto mx-auto" alt="KidSafe App">
+
+                    <div class="hidden sm:block">
+                        <div class="after:w-32 after:h-32 after:absolute after:-bottom-8 after:-left-12 after:-z-10 after:bg-[url('../images/dot.png')]"></div>
+                    </div>
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- home-kidsafe end -->
+
+    <!-- How it work start -->
+    <section class="py-24">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Cách <span class="font-semibold">Hoạt Động</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Phần mềm hoạt động như thế nào?</h2>
+                <p class="text-base font-normal text-gray-500">KidSafe cung cấp các tính năng bảo vệ trẻ em hiệu quả.</p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid lg:grid-cols-3 grid-cols-1 gap-10">
+                    <div>
+                        <div class="relative">
+                            <div class="text-center">
+                                <span
+                                    class="inline-flex relative z-0 bg-blue-500/10 dark:bg-blue-100/5 h-24 w-24 items-center justify-center"
+                                    style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                                    <i class="mdi mdi-format-list-bulleted text-5xl"></i>
+                                </span>
+                                <h5 class="text-xl font-semibold mb-3 mt-5">1. Chặn Web Khiêu Dâm</h5>
+                                <p class="text-base font-normal text-gray-500">Tự động chặn các trang web khiêu dâm.</p>
+
+                                <div class="hidden lg:block">
+                                    <img src="assets/images/arrow-top.png" class="absolute -right-16 top-2/4 w-28">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end grid col -->
+
+                    <div>
+                        <div class="relative">
+                            <div class="text-center">
+                                <span
+                                    class="inline-flex relative z-0 bg-emerald-500/10 dark:bg-emerald-100/5 h-24 w-24 items-center justify-center"
+                                    style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                                    <i class="mdi mdi-palette-outline text-5xl"></i>
+                                </span>
+                                <h5 class="text-xl font-semibold mb-3 mt-5">2. Chặn Game Online</h5>
+                                <p class="text-gray-600 dark:text-gray-400">Ngăn chặn truy cập vào các trò chơi trực tuyến không phù hợp.</p>
+
+                                <div class="hidden lg:block">
+                                    <img src="assets/images/arrow-bottom.png" class="absolute -right-20 top-2/4 w-28">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end grid col -->
+
+                    <div>
+                        <div class="text-center">
+                            <span
+                                class="inline-flex relative z-0 bg-amber-500/10 dark:bg-amber-100/5 h-24 w-24 items-center justify-center"
+                                style="border-radius: 28% 72% 50% 50%/26% 20% 80% 74%;">
+                                <i class="mdi mdi-layers-triple text-5xl"></i>
+                            </span>
+                            <h5 class="text-xl font-semibold mb-3 mt-5">3. Chặn Mạng Xã Hội</h5>
+                            <p class="text-gray-600 dark:text-gray-400">Kiểm soát và chặn truy cập vào các mạng xã hội.</p>
+                        </div>
+                    </div><!-- end grid col -->
+                </div><!-- Grid End -->
+            </div>
+        </div><!-- Container End -->
+    </section>
+    <!-- How it work End -->
+
+    <!-- features start -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Các <span class="font-semibold">Tính Năng</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Bảo Vệ Trẻ Em Toàn Diện</h2>
+                <p class="text-base font-normal text-gray-500">Khám phá các tính năng giúp KidSafe trở thành công cụ bảo vệ trẻ em hiệu quả.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-16 items-center">
+                <div>
+                    <img src="assets/images/features-1.png" class="mx-auto" alt="">
+                </div>
+
+                <div class="lg:ms-24">
+                    <h1 class="text-4xl font-semibold">Chụp Ảnh Màn Hình</h1>
+                    <p class="text-base font-normal text-gray-500 mt-8">Tự động chụp ảnh màn hình để giám sát hoạt động của trẻ.</p>
+
+                    <div class="flex items-center gap-5 mt-5">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-check text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Gửi Email Ảnh Chụp Màn Hình</span> đến phụ huynh.</p>
+                    </div><!-- Flex End -->
+
+                    <div class="flex items-center gap-5 mt-8">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-lock-outline text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Chặn Game Cài Trên Máy</span> để bảo vệ trẻ em khỏi các trò chơi không phù hợp.</p>
+                    </div><!-- Flex End -->
+
+                    <div class="flex items-center gap-5 mt-8">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-timer-sand text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Khóa Máy Tính Theo Giờ</span> để quản lý thời gian sử dụng.</p>
+                    </div><!-- Flex End -->
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- features end -->
+
+    <!-- features start -->
+    <section class="py-20 bg-gray-50 relative bg-no-repeat bg-cover"
+        style="background-image: url('assets/images/features-bg.png');">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-16 items-center">
+                <div class="lg:me-24">
+                    <h1 class="text-4xl font-semibold">Khóa Truy Cập Mạng Theo Giờ</h1>
+                    <p class="text-base font-normal text-gray-500 mt-8">Quản lý thời gian truy cập internet của trẻ.</p>
+
+                    <div class="flex items-center gap-5 mt-5">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-check text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Tự Động Cập Nhật Dữ Liệu Web</span> để bảo vệ trẻ em khỏi nội dung không phù hợp.</p>
+                    </div><!-- Flex End -->
+
+                    <div class="flex items-center gap-5 mt-8">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-lock-outline text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Điều Khiển Từ Xa Qua Smartphone</span> để quản lý thiết bị của trẻ từ xa.</p>
+                    </div><!-- Flex End -->
+
+                    <div class="flex items-center gap-5 mt-8">
+                        <div>
+                            <div class="w-10 h-10 rounded-full shadow-lg bg-white flex items-center justify-center">
+                                <i class="mdi mdi-alert-circle-outline text-base text-blue-600"></i>
+                            </div>
+                        </div>
+                        <p class="text-base font-normal text-gray-500"><span class="font-bold text-gray-900">Cảnh Báo Con Khi Rời Vị Trí</span> để đảm bảo an toàn cho trẻ.</p>
+                    </div><!-- Flex End -->
+                </div>
+
+                <div>
+                    <img src="assets/images/features-2.png" class="mx-auto" alt="">
+                </div>
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- features end -->
+
+    <!-- counter start -->
+    <section class="relative py-28 bg-cover bg-no-repeat bg-center"
+        style="background-image: url('assets/images/counter-bg.jpg'); background-attachment: fixed;">
+        <div class="absolute inset-0 w-full h-full bg-gray-900/70"></div>
+
+        <div class="container relative">
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6">
+                <div class="border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5">
+                    <div class="flex items-center gap-6">
+                        <i class="mdi mdi-web text-5xl"></i>
+                        <div>
+                            <h1 class="text-4xl"><span class="counter_value" data-target="825">0</span></h1>
+                            <p class="text-lg font-medium uppercase mt-3">Thương Hiệu Toàn Cầu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5">
+                    <div class="flex items-center gap-6">
+                        <i class="mdi mdi-emoticon-happy text-5xl"></i>
+                        <div>
+                            <h1 class="text-4xl"><span class="counter_value" data-target="1800">0</span>+</h1>
+                            <p class="text-lg font-medium uppercase mt-3">Khách Hàng Hạnh Phúc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5">
+                    <div class="flex items-center gap-6">
+                        <i class="mdi mdi-lightbulb-on text-5xl"></i>
+                        <div>
+                            <h1 class="text-4xl"><span class="counter_value" data-target="599">0</span>+</h1>
+                            <p class="text-lg font-medium uppercase mt-3">Thương Hiệu Toàn Cầu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-500 rounded-lg text-white bg-gray-500/40 p-5">
+                    <div class="flex items-center gap-6">
+                        <i class="mdi mdi-account-multiple text-5xl"></i>
+                        <div>
+                            <h1 class="text-4xl"><span class="counter_value" data-target="2000">0</span>+</h1>
+                            <p class="text-lg font-medium uppercase mt-3">Khách Hàng Sử Dụng</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- counter end -->
+
+    <!-- App Screens start -->
+    <section id="screenshots" class="py-20">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Ảnh <span class="font-semibold">Chụp Màn Hình</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Ảnh Chụp Tuyệt Vời</h2>
+                <p class="text-base font-normal text-gray-500">Khám phá các ảnh chụp màn hình của KidSafe.</p>
+            </div>
+
+            <!-- Swiper slider start -->
+            <div class="mySwiper swiper swiper-1 relative mt-16">
+                <div class="swiper-wrapper py-10 mb-14">
+                    <div class="swiper-slide mx-auto">
+                        <img src="assets/images/screen-shot/1.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/screen-shot/2.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/screen-shot/3.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/screen-shot/4.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/screen-shot/5.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/screen-shot/6.jpg" class="rounded-md border mx-auto" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper slider end -->
+        </div>
+    </section>
+    <!-- App Screens end -->
+
+    <!-- testimonial start -->
+    <section id="testimonial" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Ý Kiến <span class="font-semibold">Khách Hàng</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Phụ Huynh Nói Gì</h2>
+                <p class="text-base font-normal text-gray-500">Nghe từ những phụ huynh tin tưởng KidSafe để bảo vệ con cái họ trực tuyến.</p>
+            </div>
+
+            <div class="text-center mt-16">
+                <p class="text-base font-normal text-gray-500">“KidSafe đã mang lại cho chúng tôi sự yên tâm khi biết rằng con cái của chúng tôi an toàn trực tuyến.”</p>
+                <div class="max-w-3xl mx-auto mt-4 mb-10">
+                    <h5 class="text-lg font-medium">Chúng tôi rất hài lòng với KidSafe và các tính năng bảo vệ trẻ em của nó.</h5>
+                </div>
+                <img src="assets/images/users/user-1.jpg" class="mx-auto rounded-full h-16" alt="">
+                <h5 class="text-base font-medium mt-6">Nguyễn Thị Thu Trang</h5>
+                <p class="text-sm font-normal text-gray-500 mt-1">Phụ Huynh, Việt Nam</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 mt-20">
+                <div>
+                    <img src="assets/images/brand-logo/dribbble.png" class="h-10 mx-auto" alt="">
+                </div><!-- end grid col -->
+
+                <div>
+                    <img src="assets/images/brand-logo/insta.png" class="h-10 mx-auto" alt="">
+                </div><!-- end grid col -->
+
+                <div>
+                    <img src="assets/images/brand-logo/bootstrap.png" class="h-10 mx-auto" alt="">
+                </div><!-- end grid col -->
+
+                <div>
+                    <img src="assets/images/brand-logo/jquery.png" class="h-10 mx-auto" alt="">
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- testimonial end -->
+
+    <!-- Pricing start -->
+    <section id="pricing" class="py-20">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Giá <span class="font-semibold">Cả</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Kế Hoạch Giá</h2>
+                <p class="text-base font-normal text-gray-500">Chúng tôi cung cấp các gói giá linh hoạt cho KidSafe.</p>
+            </div> 
+
+            <div class="flex justify-center mt-10">
+                <div class="inline-block border p-2 rounded-full bg-gray-500/10">
+                    <div class="flex items-center gap-5">
+                        <button
+                            class="py-2 px-4  text-base font-normal rounded-full text-white bg-blue-600">Hàng Tháng</button>
+                    </div>
+                </div>
+            </div><!-- flex End -->
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 items-center mt-16">
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative">
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Miễn Phí</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">0<span
+                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn game online</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn mạng xã hội</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chụp ảnh màn hình</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Gửi email ảnh chụp màn hình</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn game cài trên máy</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="#"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative overflow-hidden">
+                        <div class="absolute right-0 top-0 h-16 w-16 z-10">
+                            <div
+                                class="absolute rotate-45 bg-red-600 text-center text-white font-normal text-sm py-0.5 right-[-35px] top-[32px] w-[170px] shadow-lg">
+                                Phổ Biến Nhất
+                            </div>
+                        </div>
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Tiêu Chuẩn</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">290.000<span
+                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Khóa máy tính theo giờ</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Khóa truy cập mạng theo giờ</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tự động cập nhật dữ liệu web</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Điều khiển từ xa qua smartphone</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Cảnh báo con khi rời vị trí</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="#"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative">
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Doanh Nghiệp</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">490.000<span
+                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tất cả các tính năng trên</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Hỗ trợ nâng cao</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tư vấn miễn phí</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Hỗ trợ 24/7</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Báo cáo hàng tháng</p>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="#"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- Pricing end -->
+
+    <!-- faqs start -->
+    <section class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Câu Hỏi <span class="font-semibold">Thường Gặp</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Câu Hỏi Thường Gặp</h2>
+                <p class="text-base font-normal text-gray-500">Chúng tôi đã tổng hợp một số câu hỏi thường gặp.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 items-center mt-16">
+                <div>
+                    <img src="assets/images/faq.png" class="mx-auto" alt="">
+                </div><!-- end grid col -->
+
+                <div class="lg:col-span-2 lg:ms-24">
+                    <div data-fc-type="accordion" class="space-y-4">
+                        <div>
+                            <button
+                                class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base px-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500"
+                                data-fc-type="collapse">
+                                Làm thế nào để cài đặt ứng dụng?
+                                <span
+                                    class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    Bạn có thể tải ứng dụng từ trang web chính thức và làm theo hướng dẫn cài đặt.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base px-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500" data-fc-type="collapse">
+                                Làm thế nào để tôi có được ứng dụng di động cho điện thoại của mình?
+                                <span class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="hidden w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    Bạn có thể tải ứng dụng từ cửa hàng ứng dụng trên điện thoại của mình.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base p-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500" data-fc-type="collapse">
+                                Điều gì đặc biệt về KidSafe?
+                                <span class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="hidden w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    KidSafe cung cấp các tính năng bảo vệ trẻ em toàn diện và dễ sử dụng.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base p-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500" data-fc-type="collapse">
+                                KidSafe có giá bao nhiêu?
+                                <span class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="hidden w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    KidSafe có nhiều gói giá khác nhau, bắt đầu từ miễn phí đến các gói trả phí.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base p-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500" data-fc-type="collapse">
+                                Làm thế nào để tôi vô hiệu hóa các ứng dụng đã cài đặt?
+                                <span class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="hidden w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    Bạn có thể vào cài đặt để vô hiệu hóa các ứng dụng không mong muốn.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="fc-collapse-open:bg-gray-200 bg-white rounded fc-collapse-open:rounded-b-none text-base p-5 py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-gray-800 transition hover:text-gray-500" data-fc-type="collapse">
+                                KidSafe có bảo mật cho các khoản thanh toán của tôi không?
+                                <span class="mdi mdi-chevron-down ms-auto text-2xl transition-all fc-collapse-open:-rotate-180"></span>
+                            </button>
+                            <div class="hidden w-full overflow-hidden transition-[height] duration-300 bg-white rounded-b-md">
+                                <p class="text-sm font-normal text-gray-500 p-5">
+                                    KidSafe đảm bảo an toàn cho thông tin thanh toán của bạn.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- faqs end -->
+
+    <!-- cta start -->
+    <section class="py-20">
+        <div class="container">
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="md:text-5xl text-3xl font-semibold">Có Sẵn Trên Điện Thoại Của Bạn.</h1>
+                <p class="text-base font-normal text-gray-500 mt-7">KidSafe giúp bạn bảo vệ trẻ em một cách hiệu quả và dễ dàng.</p>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-12">
+                    <a href="#" class="shadow-xl">
+                        <img src="assets/images/i-store.png" alt="">
+                    </a>
+                    <a href="#" class="shadow-xl">
+                        <img src="assets/images/play-store.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div><!-- Container End -->
+    </section>
+    <!-- cta end -->
+
+    <!-- contact start -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Liên Hệ <span class="font-semibold">Chúng Tôi</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Liên Hệ Với Chúng Tôi</h2>
+                <p class="text-base font-normal text-gray-500">Chúng tôi luôn sẵn sàng hỗ trợ bạn. Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6 items-center mt-16">
+                <div>
+                    <div class="flex items-center gap-6">
+                        <img src="assets/images/hello-icon.png" class="h-20" alt="">
+                        <h2 class="text-3xl font-semibold">Chào Bạn!</h2>
+                    </div>
+
+                    <div class="flex items-center gap-5 mt-10">
+                        <div class="h-10 w-10 rounded-md bg-blue-100 flex items-center justify-center">
+                            <i class="mdi mdi-email text-2xl text-blue-600"></i>
+                        </div>
+                        <h5 class="text-xl font-medium">Email</h5>
+                    </div>
+                    <p class="flex items-center gap-1 text-gray-500 mt-4">
+                        <i class="mdi mdi-arrow-right-thin text-2xl"></i>
+                        <a href="#" class="text-base font-normal">support@kidsafe.com</a>
+                    </p>
+
+                    <div class="flex items-center gap-5 mt-6">
+                        <div class="h-10 w-10 rounded-md bg-blue-100 flex items-center justify-center">
+                            <i class="mdi mdi-phone text-2xl text-blue-600"></i>
+                        </div>
+                        <h5 class="text-xl font-medium">Điện Thoại</h5>
+                    </div>
+                    <p class="flex items-center gap-1 text-gray-500 mt-4">
+                        <i class="mdi mdi-arrow-right-thin text-2xl"></i>
+                        <a href="#" class="text-base font-normal">(+84) 988.262.034 </a>
+                    </p>
+
+                    <div class="flex items-center gap-5 mt-6">
+                        <div class="h-10 w-10 rounded-md bg-blue-100 flex items-center justify-center">
+                            <i class="mdi mdi-google-maps text-2xl text-blue-600"></i>
+                        </div>
+                        <h5 class="text-xl font-medium">Địa Chỉ</h5>
+                    </div>
+                    <h5 class="flex items-center gap-1 text-gray-900 mt-4">
+                        <i class="mdi mdi-arrow-right-thin text-2xl"></i>
+                        <a href="#" class="text-base font-medium">Trường TH - THCS - THPT Sao Việt</a>
+                    </h5>
+                    <p class="text-base font-normal text-gray-500">18 Hoàng Đạo Thúy, P.Tây Sơn, TP Pleiku, Gia Lai</p>
+                </div> <!-- end grid col -->
+
+                <div class="lg:col-span-2 lg:ms-24">
+                    <div class="p-12 rounded-md shadow-lg bg-white">
+                        <form>
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="formFirstName" class="block text-sm/normal font-semibold text-gray-500 mb-2">Họ</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formFirstName" placeholder="Họ của bạn..." required="">
+                                </div>
+
+                                <div>
+                                    <label for="formLastName" class="block text-sm/normal font-semibold text-gray-500 mb-2">Tên</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formLastName" placeholder="Tên của bạn..." required="">
+                                </div>
+
+                                <div>
+                                    <label for="formEmail" class="block text-sm/normal font-semibold text-gray-500 mb-2">Địa Chỉ Email</label>
+                                    <input type="email" class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formEmail" placeholder="Email của bạn..." required="">
+                                </div>
+
+                                <div>
+                                    <label for="formPhone" class="block text-sm/normal font-semibold text-gray-500 mb-2">Số Điện Thoại</label>
+                                    <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formPhone" placeholder="Nhập số điện thoại..." required="">
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <div class="mb-3">
+                                        <label for="formSubject" class="block text-sm/normal font-semibold text-gray-500 mb-2">Chủ Đề</label>
+                                        <input type="text" class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formSubject" placeholder="Nhập chủ đề..." required="">
+                                    </div>
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <div class="mb-4">
+                                        <label for="formMessages" class="block text-sm/normal font-semibold text-gray-500 mb-2">Tin Nhắn</label>
+                                        <textarea class="block w-full text-sm rounded-md py-2 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent" id="formMessages" rows="4" placeholder="Nhập tin nhắn..." required=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="py-2 px-6 rounded-md text-white bg-gradient-to-r from-rose-600 to-rose-300">Gửi Tin Nhắn <i class="mdi mdi-send ms-1"></i></button>
+                        </form><!-- From End -->
+                    </div>
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- contact end -->
+
+    <!-- ================== Footer section start =================== -->
+    <footer class="bg-center bg-no-repeat bg-[#343a40]"
+        style="background-image: url('assets/images/footer-light-bg.png');">
+        <div class="container lg:px-20">
+
+            <div class="grid grid-cols-1 xl:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 pt-20 pb-10">
+                <div class="sm:col-span-5 xl:col-span-1 mx-auto text-center">
+                    <a href="#" class="flex items-center gap-2 justify-center">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class=" w-36" alt="">
+                    </a>
+                    <div class="my-5">
+                        <a href="#" class="text-slate-100 font-normal">Hello@ptsaoviet.com</a>
+                        <p class="text-slate-200 text-base font-normal">+84 ( 0914.133.352 )</p>
+                    </div>
+                    <h5 class="text-white 2xl:text-lg text-base mb-4">Theo Dõi Chúng Tôi</h5>
+                    <ul class="flex flex-wrap items-center gap-4">
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-facebook align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-twitter align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-linkedin align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-skype align-middle text-xl"></i></a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Về Chúng Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Trung Tâm Hỗ Trợ</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Hỗ Trợ Khách Hàng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Về Chúng Tôi</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Bản Quyền</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chiến Dịch Phổ Biến</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Thông Tin Của Chúng Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Trả Hàng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Bảo Mật</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Điều Khoản & Điều Kiện</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Sơ Đồ Trang Web</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Giờ Mở Cửa</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Tài Khoản Của Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Yêu Cầu Báo Chí</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Danh Bạ Mạng Xã Hội</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Hình Ảnh & B-roll</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Quyền Hạn</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Yêu Cầu Diễn Giả</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Chính Sách</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Bảo Mật Ứng Dụng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Nguyên Tắc Phần Mềm</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Phần Mềm</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chuỗi Cung Ứng Có Trách Nhiệm</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+
+        <div class="bg-[#484d53] py-2 text-white/75">
+            <div class="container lg:px-24">
+                <div class="flex flex-wrap justify-between items-center">
+                    <p class="opacity-75">
+                        <script>document.write(new Date().getFullYear())</script>
+                        © KidSafe - <a href="#">ptsaoviet</a>
+                    </p>
+                    <p class="opacity-75 mt-3 sm:mt-0">
+                        <a href="#">Điều Khoản & Chính Sách</a>
+                    </p>
+                </div><!-- Flex End -->
+            </div><!-- Container End -->
+        </div>
+    </footer>
+    <!-- ================== Footer section End =================== -->
+
+   <!-- =========== Back To Top Start =========== -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed rounded z-10 bottom-5 end-5 px-1.5 text-xl text-center bg-gradient-to-r from-primary to-blue-400 text-white leading-8 transition-all duration-500 block">
+        <span class="mdi mdi-chevron-up text-2xl/none"></span>
+    </a>
+    <!-- =========== Back To Top End =========== -->
+
+    <!-- =========== Log In Modal =========== -->
+    <div id="login-modal" class="fixed top-0 left-0 z-50 transition-all duration-500 fc-modal hidden w-full h-full min-h-full items-center fc-modal-open:flex">
+        <div class="mt-5 fc-modal-open:scale-100 duration-300 scale-90 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto  bg-white border shadow-sm rounded-md dark:bg-slate-800 dark:border-gray-700">
+            <div class="p-6 overflow-y-auto">
+                <div class="text-center mb-4">
+                    <h4 class="text-2xl/tight mb-2">Chào Mừng Trở Lại</h4>
+                    <p class="text-base text-gray-500 mb-6">Chào mừng bạn trở lại! Vui lòng nhập thông tin của bạn.</p>
+                </div>
+
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
+                            for="LoggingEmailAddress">Địa Chỉ Email</label>
+                        <input id="LoggingEmailAddress"
+                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
+                            type="email" placeholder="Email của bạn...">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
+                            for="loggingPassword">Mật Khẩu</label>
+                        <input id="loggingPassword"
+                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
+                            type="password">
+                    </div>
+
+                    <div class="flex items-center justify-between mb-7">
+                        <div class="flex items-center">
+                            <input type="checkbox" class="border-gray-300 rounded" id="checkbox-signin">
+                            <label class="ms-2" for="checkbox-signin">Nhớ trong 30 ngày</label>
+                        </div>
+                        <a href="#" class="text-sm text-gray-600">Quên Mật Khẩu..?</a>
+                    </div>
+
+                    <div class="flex justify-center mb-6">
+                        <button
+                            class="py-2 px-6 bg-gradient-to-r from-primary to-blue-300 w-full rounded-md text-white text-base">
+                            Đăng Nhập </button>
+                    </div>
+
+                    <div class="flex items-center my-6">
+                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
+                        <div class="mx-4 text-secondary">Hoặc tiếp tục với</div>
+                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
+                    </div>
+
+                    <div class="flex gap-4 justify-center">
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-red-600 rounded-md text-white">
+                            <i class="mdi mdi-google text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-primary rounded-md text-white">
+                            <i class="mdi mdi-facebook text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-sky-500 rounded-md text-white">
+                            <i class="mdi mdi-twitter text-xl"></i>
+                        </a>
+                    </div><!-- end social media -->
+                </form><!-- end form -->
+            </div>
+        </div>
+    </div>
+    <!-- =========== Log In Modal End =========== -->
+
+    <!-- Frost UI -->
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+    <!-- Gumshoejs -->
+    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Theme Js -->
+    <script src="assets/js/theme.min.js"></script>
+
+</body>
+
+</html>

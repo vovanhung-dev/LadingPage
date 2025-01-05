@@ -1,0 +1,118 @@
+// Navbar 
+.header {
+    @apply fixed top-0 inset-x-0 flex flex-wrap lg:justify-start lg:flex-nowrap items-center z-40 w-full transition-all text-sm py-3 lg:py-0 bg-white lg:bg-transparent;
+
+    .navbar-nav {
+        @apply py-5 transition-all duration-500 mt-5 lg:mt-0 ps-3;
+
+        .nav-link {
+            @apply relative font-medium text-base py-1.5 mx-1 lg:block transition-all;
+
+            &::after {
+                content: "";
+                @apply transition-all absolute bottom-px inset-x-2.5 rounded-lg border-b-2 border-transparent;
+            }
+        }
+
+        .nav-btn-link {
+            @apply py-2 flex text-base font-medium;
+        }
+
+        .nav-btn {
+            @apply py-1.5 px-4 w-24 rounded flex justify-center items-center border text-base font-medium transition-all;
+        }
+
+    }
+
+    &.header-light {
+        .navbar-brand {
+            .logo-light {
+                @apply hidden lg:block;
+            }
+    
+            .logo-dark {
+                @apply block lg:hidden;
+            }
+        }
+    
+        .navbar-nav {
+            .nav-link {
+                @apply  text-gray-600 lg:text-gray-300 hover:text-white transition-all;
+            }
+    
+            .active {
+                .nav-link {
+                    @apply text-primary lg:text-white;
+    
+                    &::after {
+                        @apply border-primary lg:border-white;
+                    }
+                }
+            }
+    
+            .nav-btn-link {
+                @apply text-gray-600 lg:text-white;
+            }
+    
+            .nav-btn {
+                @apply border-primary/25 text-primary bg-primary/10 hover:bg-primary hover:text-white lg:bg-white/10 lg:hover:text-blue-600 lg:hover:bg-white lg:border-white/25 lg:text-white;
+            }
+    
+        }
+    }
+    
+    &.header-dark,        
+    &.nav-sticky {
+        .navbar-brand {
+            .logo-light {
+                @apply hidden;
+            }
+
+            .logo-dark {
+                @apply block;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    @apply text-gray-500;
+                }
+
+                &.active {
+                    .nav-link {
+                        @apply text-primary;
+
+                        &::after {
+                            @apply border-primary;
+                        }
+                    }
+                }
+            }
+
+            .nav-btn-link {
+                @apply text-gray-500;
+            }
+            .nav-btn {
+                @apply border-primary/20 text-primary bg-primary/10 hover:bg-primary hover:text-white;
+            }
+        }
+    }
+
+    &.nav-sticky {
+        @apply bg-white shadow-md;
+        .navbar-nav {
+            @apply py-3.5;
+
+            .nav-item {
+                .nav-link {
+                    @apply text-gray-700;
+                }
+            }
+
+            .nav-btn-link {
+                @apply text-gray-700;
+            }
+        }
+    }
+}

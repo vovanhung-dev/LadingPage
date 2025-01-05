@@ -1,0 +1,63 @@
+/*
+Template Name: Appexy - Tailwind CSS Landing Page Template
+Version: 1.0
+Author: CoderThemes
+Email: support@coderthemes.com
+File: Main Css File
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Google font
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
+html {
+    @apply relative scroll-smooth;
+}
+
+body {
+    font-size: 15px;
+    @apply font-body overflow-x-hidden text-gray-700;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-semibold;
+}
+
+.swiper-1 {
+    @apply px-12;
+
+    .swiper-slide {
+        @apply relative transition-all duration-[0.3s] max-w-full overflow-hidden border border-gray-100 rounded-lg;
+
+        &.swiper-slide-active {
+            @apply scale-[1.1] shadow-[0px_5px_20px_0px_#343a401a];
+        }
+    }
+
+}
+
+.swiper-pagination-bullets-dynamic {
+    @apply py-1;
+}
+
+.swiper-pagination-bullet-active {
+    @apply ring-2 ring-offset-2 bg-primary ring-primary;
+}
+
+@import "components/navbar";
