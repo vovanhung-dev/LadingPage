@@ -58,6 +58,11 @@
             Thanh Toán Ngay
         </button>
 
+        <!-- Thêm phần tử loading -->
+        <div id="loading" class="hidden text-center mt-4">
+            <p class="text-gray-700">Đang xử lý thanh toán...</p>
+        </div>
+
         <!-- Footer Section -->
         <div class="text-center mt-8 text-sm text-gray-500">
             <p>&copy; 2025 KidSafe. Mọi quyền được bảo lưu.</p>
@@ -68,15 +73,23 @@
         const urlParams = new URLSearchParams(window.location.search);
         const package = urlParams.get('package');
 
+        // Lưu gói vào localStorage
+        localStorage.setItem('selectedPackage', package);
+
         // Hiển thị thông tin gói
         document.getElementById('payment-info').innerText = `Bạn đã chọn gói: ${package}`;
 
         // Hiển thị chi tiết gói và tổng chi phí
-        let price = package === 'free' ? 0 : package === 'standard' ? 290000 : package === 'enterprise' ? 490000 : 0;
-        document.getElementById('package-details').innerText = `Gói ${package} - ${price.toLocaleString()} VNĐ`;
-        document.getElementById('total-cost').innerText = `${price.toLocaleString()} VNĐ`;
+        let price = package === 'free' ? 1 : package === 'standard' ? 12 : package === 'enterprise' ? 20 : 0;
+        document.getElementById('package-details').innerText = `Gói ${package}`;
+        const costMapping = { 0: 0, 12: 290000, 20: 490000 };
+        document.getElementById('total-cost').innerText = `${costMapping[price].toLocaleString()} VNĐ`;
 
         document.getElementById('pay-button').addEventListener('click', async () => {
+            // Hiển thị loading và vô hiệu hóa nút
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('pay-button').disabled = true;
+
             try {
                 const response = await axios.post('http://localhost:3100/api/payment/pay', {
                     price: price,
@@ -88,6 +101,10 @@
             } catch (error) {
                 console.error('Error initiating payment:', error);
                 alert('Đã xảy ra lỗi khi tạo yêu cầu thanh toán. Vui lòng thử lại sau.');
+            } finally {
+                // Ẩn loading và kích hoạt lại nút
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('pay-button').disabled = false;
             }
         });
     </script>
