@@ -91,7 +91,7 @@
             document.getElementById('pay-button').disabled = true;
 
             try {
-                const response = await axios.post('http://localhost:3100/api/payment/pay', {
+                const response = await axios.post('https://backend-production-311e.up.railway.app/api/payment/pay', {
                     price: price,
                     description: `Gói ${package}`,
                     return_url: `${window.location.origin}/success.html`,
