@@ -67,12 +67,12 @@
                         </li>
                     </ul>
                     <div class="lg:hidden block grow navbar-nav !mt-0">
-                        <button type="button" data-fc-target="login-modal" data-fc-type="modal" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 300px">Đăng Nhập</button>
-                        <a href="#" class="nav-btn">Đăng Ký</a>
+                        <a href="login.html" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 300px">Đăng Nhập</a>
+                        <a href="register.html" class="nav-btn">Đăng Ký</a>
                     </div>
                 </div> <!-- end nav items -->
                 <div class="lg:flex gap-4 hidden grow navbar-nav">
-                    <button type="button" data-fc-target="login-modal" data-fc-type="modal" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 100px">Đăng Nhập</button>
+                    <a href="login.html" class="py-2 flex text-base font-medium text-white nav-btn-link" style="width: 100px">Đăng Nhập</a>
                     <a href="#" class="nav-btn" style="width: 100px">Đăng Ký</a>
                 </div><!-- end nav buttons -->
             </nav><!-- end nav -->
@@ -420,7 +420,7 @@
                         <div class="p-7 rounded-md text-center bg-gray-50">
                             <h5 class="text-lg font-medium">Miễn Phí</h5>
                             <h1 class="text-4xl font-semibold text-blue-600">0<span
-                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
                         </div>
                         <div class="grid gap-y-4 mt-8">
                             <div class="flex items-center gap-2">
@@ -468,7 +468,7 @@
                         <div class="p-7 rounded-md text-center bg-gray-50">
                             <h5 class="text-lg font-medium">Tiêu Chuẩn</h5>
                             <h1 class="text-4xl font-semibold text-blue-600">290.000<span
-                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
                         </div>
                         <div class="grid gap-y-4 mt-8">
                             <div class="flex items-center gap-2">
@@ -510,7 +510,7 @@
                         <div class="p-7 rounded-md text-center bg-gray-50">
                             <h5 class="text-lg font-medium">Doanh Nghiệp</h5>
                             <h1 class="text-4xl font-semibold text-blue-600">490.000<span
-                                    class="text-base font-normal text-gray-500">/Tháng</span></h1>
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
                         </div>
                         <div class="grid gap-y-4 mt-8">
                             <div class="flex items-center gap-2">
@@ -901,67 +901,7 @@
     </a>
     <!-- =========== Back To Top End =========== -->
 
-    <!-- =========== Log In Modal =========== -->
-    <div id="login-modal" class="fixed top-0 left-0 z-50 transition-all duration-500 fc-modal hidden w-full h-full min-h-full items-center fc-modal-open:flex">
-        <div class="mt-5 fc-modal-open:scale-100 duration-300 scale-90 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto  bg-white border shadow-sm rounded-md dark:bg-slate-800 dark:border-gray-700">
-            <div class="p-6 overflow-y-auto">
-                <div class="text-center mb-4">
-                    <h4 class="text-2xl/tight mb-2">Chào Mừng Trở Lại</h4>
-                    <p class="text-base text-gray-500 mb-6">Chào mừng bạn trở lại! Vui lòng nhập thông tin của bạn.</p>
-                </div>
-
-                <form>
-                    <div class="mb-4">
-                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
-                            for="LoggingEmailAddress">Địa Chỉ Email</label>
-                        <input id="LoggingEmailAddress"
-                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
-                            type="email" placeholder="Email của bạn...">
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
-                            for="loggingPassword">Mật Khẩu</label>
-                        <input id="loggingPassword"
-                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
-                            type="password">
-                    </div>
-
-                    <div class="flex items-center justify-between mb-7">
-                        <div class="flex items-center">
-                            <input type="checkbox" class="border-gray-300 rounded" id="checkbox-signin">
-                            <label class="ms-2" for="checkbox-signin">Nhớ trong 30 ngày</label>
-                        </div>
-                        <a href="#" class="text-sm text-gray-600">Quên Mật Khẩu..?</a>
-                    </div>
-
-                    <div class="flex justify-center mb-6">
-                        <button
-                            class="py-2 px-6 bg-gradient-to-r from-primary to-blue-300 w-full rounded-md text-white text-base">
-                            Đăng Nhập </button>
-                    </div>
-
-                    <div class="flex items-center my-6">
-                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
-                        <div class="mx-4 text-secondary">Hoặc tiếp tục với</div>
-                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
-                    </div>
-
-                    <div class="flex gap-4 justify-center">
-                        <a href="javascript:void(0)" class="py-2 px-6 bg-red-600 rounded-md text-white">
-                            <i class="mdi mdi-google text-xl"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="py-2 px-6 bg-primary rounded-md text-white">
-                            <i class="mdi mdi-facebook text-xl"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="py-2 px-6 bg-sky-500 rounded-md text-white">
-                            <i class="mdi mdi-twitter text-xl"></i>
-                        </a>
-                    </div><!-- end social media -->
-                </form><!-- end form -->
-            </div>
-        </div>
-    </div>
+  
     <!-- =========== Log In Modal End =========== -->
 
     <!-- Frost UI -->

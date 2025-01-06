@@ -112,6 +112,7 @@ const style = function () {
 const initBrowserSync = function (done) {
     const startPath = "/";
     const redirectPath = startPath === "/" ? "/index-2.html" : startPath;
+    console.log("Starting BrowserSync with path:", redirectPath);
     browsersync.init({
         startPath: redirectPath,
         server: {

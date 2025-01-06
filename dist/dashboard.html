@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <title>KidSafe - Phần Mềm Bảo Vệ Trẻ Em</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="bảo vệ trẻ em, kiểm soát phụ huynh, quản lý thời gian sử dụng, giám sát từ xa, an toàn trên internet" name="description" />
+    <meta content="coderthemes" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+    <!--Material Icon -->
+    <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Style css -->
+    <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Thêm link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Áp dụng font cho toàn bộ trang */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ============= Header Start ============= -->
+    <header id="navbar-sticky" class="header header-dark">
+        <div class="container">
+            <nav class="relative w-full mx-auto lg:flex lg:items-center lg:justify-between" aria-label="Global">
+                <div class="flex items-center justify-between">
+                    <a class="navbar-brand flex-none" href="#home">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class="h-6 logo-dark" alt="KidSafe Logo">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class="h-6 logo-light" alt="KidSafe Logo">
+                    </a><!-- end logo -->
+
+                    <div class="block lg:hidden">
+                        <button class="inline-flex ms-4 items-center justify-center h-9 w-12 rounded-md border border-gray-300 bg-slate-300/30" type="button" data-fc-target="collapse-target" data-fc-type="collapse">
+                            <i class="mdi mdi-menu text-2xl"></i>
+                        </button>
+                    </div> <!-- end mobile menu button -->
+                </div>
+                <div id="collapse-target" class="hidden overflow-hidden transition-all duration-300 basis-full grow lg:block">
+                   
+                    <div class="lg:hidden block grow navbar-nav !mt-0">
+                        <div class="relative flex items-center">
+                            <img id="user-avatar-mobile" src="" alt="User Avatar" class="h-10 w-10 rounded-full border-2 border-blue-500 shadow-lg cursor-pointer" />
+                            <span id="username-mobile" class="text-black font-semibold ml-2"></span>
+                            <a href="#" id="logout-btn-mobile" class="ml-4 px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Đăng Xuất</a>
+                        </div>
+                    </div>
+                </div> <!-- end nav items -->
+                <div class="lg:flex gap-4 hidden grow navbar-nav items-center">
+                    <div class="relative flex items-center">
+                        <img id="user-avatar" src="" alt="User Avatar" class="h-12 w-12 rounded-full border-2 border-blue-500 shadow-lg cursor-pointer" />
+                        <span id="username" class="text-black font-semibold ml-3 text-lg"></span>
+                        <a href="#" id="logout-btn" style="width: 150px;" class="ml-4 px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">Đăng Xuất</a>
+                    </div>
+                </div><!-- end nav buttons -->
+            </nav><!-- end nav -->
+        </div>
+    </header>
+    <!-- ============= Header End ============= -->
+
+    <section id="home" class="pt-32 pb-20" style="background-image: url('assets/images/heros/hero-2-bg.png');">
+            <!-- Pricing start -->
+    <section id="pricing" class="py-20">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto">
+                <h6 class="font-normal uppercase mb-2">Giá <span class="font-semibold">Cả</span></h6>
+                <h2 class="text-3xl font-semibold mb-3">Kế Hoạch Giá</h2>
+                <p class="text-base font-normal text-gray-500">Chúng tôi cung cấp các gói giá linh hoạt cho KidSafe.</p>
+            </div> 
+
+            <div class="flex justify-center mt-10">
+                <div class="inline-block border p-2 rounded-full bg-gray-500/10">
+                    <div class="flex items-center gap-5">
+                        <button
+                            class="py-2 px-4  text-base font-normal rounded-full text-white bg-blue-600">Hàng Tháng</button>
+                    </div>
+                </div>
+            </div><!-- flex End -->
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 items-center mt-16">
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative">
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Miễn Phí</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">0<span
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn game online</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn mạng xã hội</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chụp ảnh màn hình</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Gửi email ảnh chụp màn hình</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Chặn game cài trên máy</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="payment.html?package=free"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative overflow-hidden">
+                        <div class="absolute right-0 top-0 h-16 w-16 z-10">
+                            <div
+                                class="absolute rotate-45 bg-red-600 text-center text-white font-normal text-sm py-0.5 right-[-35px] top-[32px] w-[170px] shadow-lg">
+                                Phổ Biến Nhất
+                            </div>
+                        </div>
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Tiêu Chuẩn</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">290.000<span
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Khóa máy tính theo giờ</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Khóa truy cập mạng theo giờ</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tự động cập nhật dữ liệu web</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Điều khiển từ xa qua smartphone</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Cảnh báo con khi rời vị trí</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="payment.html?package=standard"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+
+                <div>
+                    <div class="p-10 rounded-md shadow-lg relative">
+                        <div class="p-7 rounded-md text-center bg-gray-50">
+                            <h5 class="text-lg font-medium">Doanh Nghiệp</h5>
+                            <h1 class="text-4xl font-semibold text-blue-600">490.000<span
+                                    class="text-base font-normal text-gray-500">/Năm</span></h1>
+                        </div>
+                        <div class="grid gap-y-4 mt-8">
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tất cả các tính năng trên</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Hỗ trợ nâng cao</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Tư vấn miễn phí</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Hỗ trợ 24/7</p>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <i class="mdi mdi-check text-lg text-gray-500"></i>
+                                <p class="text-base font-normal text-gray-500">Báo cáo hàng tháng</p>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-14">
+                            <a href="payment.html?package=enterprise"
+                                class="py-2 px-6 flex items-center justify-center rounded-md text-base font-normal text-white bg-gradient-to-r from-primary to-blue-300 bg-primary/10 focus:text-black transition-all duration-500">Chọn
+                                Gói</a>
+                        </div>
+                    </div>
+                </div><!-- end grid col -->
+            </div><!-- Grid End -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+    </section>
+    <!-- Pricing end -->
+    </section>
+
+
+    <!-- ================== Footer section start =================== -->
+    <footer class="bg-center bg-no-repeat bg-[#343a40]"
+        style="background-image: url('assets/images/footer-light-bg.png');">
+        <div class="container lg:px-20">
+
+            <div class="grid grid-cols-1 xl:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 pt-20 pb-10">
+                <div class="sm:col-span-5 xl:col-span-1 mx-auto text-center">
+                    <a href="#" class="flex items-center gap-2 justify-center">
+                        <img src="https://www.centerforchildcounseling.org/wp-content/uploads/2024/03/FINAL.BKS_.Logo_-1.png" class=" w-36" alt="">
+                    </a>
+                    <div class="my-5">
+                        <a href="#" class="text-slate-100 font-normal">Hello@ptsaoviet.com</a>
+                        <p class="text-slate-200 text-base font-normal">+84 ( 0914.133.352 )</p>
+                    </div>
+                    <h5 class="text-white 2xl:text-lg text-base mb-4">Theo Dõi Chúng Tôi</h5>
+                    <ul class="flex flex-wrap items-center gap-4">
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-facebook align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-twitter align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-linkedin align-middle text-xl"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="bg-[#495057] hover:bg-white text-white hover:text-blue-600 hover:shadow-sm transition-all duration-300 h-10 w-10 rounded-md flex justify-center items-center"><i class="mdi mdi-skype align-middle text-xl"></i></a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Về Chúng Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Trung Tâm Hỗ Trợ</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Hỗ Trợ Khách Hàng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Về Chúng Tôi</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Bản Quyền</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chiến Dịch Phổ Biến</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Thông Tin Của Chúng Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Trả Hàng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Bảo Mật</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Điều Khoản & Điều Kiện</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Sơ Đồ Trang Web</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Giờ Mở Cửa</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Tài Khoản Của Tôi</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Yêu Cầu Báo Chí</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Danh Bạ Mạng Xã Hội</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Hình Ảnh & B-roll</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Quyền Hạn</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Yêu Cầu Diễn Giả</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+
+                <div class="xl:ms-3 mt-14 xl:mt-0 lg:col-span-1 col-span-2">
+                    <ul class="flex flex-col gap-3">
+                        <h5 class="xl:text-xl lg:text-lg text-white font-normal mb-2">Chính Sách</h5>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Bảo Mật Ứng Dụng</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Nguyên Tắc Phần Mềm</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chính Sách Phần Mềm</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="text-base font-normal text-slate-300 hover:text-slate-100 after:content-[''] relative after:absolute flex items-center hover:after:items-center transition-all after:transition-all duration-300 after:duration-300 after:bg-blue-600 hover:ps-3 after:left-0 after:h-0 hover:after:h-[5px] after:w-0 hover:after:w-[5px] after:rounded-full">Chuỗi Cung Ứng Có Trách Nhiệm</a>
+                        </li>
+                    </ul>
+                </div> <!-- end grid col -->
+            </div><!-- Grid End -->
+        </div><!-- Container End -->
+
+        <div class="bg-[#484d53] py-2 text-white/75">
+            <div class="container lg:px-24">
+                <div class="flex flex-wrap justify-between items-center">
+                    <p class="opacity-75">
+                        <script>document.write(new Date().getFullYear())</script>
+                        © KidSafe - <a href="#">ptsaoviet</a>
+                    </p>
+                    <p class="opacity-75 mt-3 sm:mt-0">
+                        <a href="#">Điều Khoản & Chính Sách</a>
+                    </p>
+                </div><!-- Flex End -->
+            </div><!-- Container End -->
+        </div>
+    </footer>
+    <!-- ================== Footer section End =================== -->
+
+   <!-- =========== Back To Top Start =========== -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed rounded z-10 bottom-5 end-5 px-1.5 text-xl text-center bg-gradient-to-r from-primary to-blue-400 text-white leading-8 transition-all duration-500 block">
+        <span class="mdi mdi-chevron-up text-2xl/none"></span>
+    </a>
+    <!-- =========== Back To Top End =========== -->
+
+    <!-- =========== Log In Modal =========== -->
+    <div id="login-modal" class="fixed top-0 left-0 z-50 transition-all duration-500 fc-modal hidden w-full h-full min-h-full items-center fc-modal-open:flex">
+        <div class="mt-5 fc-modal-open:scale-100 duration-300 scale-90 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto  bg-white border shadow-sm rounded-md dark:bg-slate-800 dark:border-gray-700">
+            <div class="p-6 overflow-y-auto">
+                <div class="text-center mb-4">
+                    <h4 class="text-2xl/tight mb-2">Chào Mừng Trở Lại</h4>
+                    <p class="text-base text-gray-500 mb-6">Chào mừng bạn trở lại! Vui lòng nhập thông tin của bạn.</p>
+                </div>
+
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
+                            for="LoggingEmailAddress">Địa Chỉ Email</label>
+                        <input id="LoggingEmailAddress"
+                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
+                            type="email" placeholder="Email của bạn...">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-sm/normal font-semibold text-gray-600 mb-2"
+                            for="loggingPassword">Mật Khẩu</label>
+                        <input id="loggingPassword"
+                            class="block w-full rounded-md py-1.5 px-3 border-gray-200 focus:border-gray-300 focus:ring-transparent"
+                            type="password">
+                    </div>
+
+                    <div class="flex items-center justify-between mb-7">
+                        <div class="flex items-center">
+                            <input type="checkbox" class="border-gray-300 rounded" id="checkbox-signin">
+                            <label class="ms-2" for="checkbox-signin">Nhớ trong 30 ngày</label>
+                        </div>
+                        <a href="#" class="text-sm text-gray-600">Quên Mật Khẩu..?</a>
+                    </div>
+
+                    <div class="flex justify-center mb-6">
+                        <button
+                            class="py-2 px-6 bg-gradient-to-r from-primary to-blue-300 w-full rounded-md text-white text-base">
+                            Đăng Nhập </button>
+                    </div>
+
+                    <div class="flex items-center my-6">
+                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
+                        <div class="mx-4 text-secondary">Hoặc tiếp tục với</div>
+                        <div class="flex-auto mt-px border-t border-gray-200 dark:border-slate-700"></div>
+                    </div>
+
+                    <div class="flex gap-4 justify-center">
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-red-600 rounded-md text-white">
+                            <i class="mdi mdi-google text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-primary rounded-md text-white">
+                            <i class="mdi mdi-facebook text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="py-2 px-6 bg-sky-500 rounded-md text-white">
+                            <i class="mdi mdi-twitter text-xl"></i>
+                        </a>
+                    </div><!-- end social media -->
+                </form><!-- end form -->
+            </div>
+        </div>
+    </div>
+    <!-- =========== Log In Modal End =========== -->
+
+    <!-- Frost UI -->
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+    <!-- Gumshoejs -->
+    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Theme Js -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <script>
+        // Check if user data exists in localStorage
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            // Redirect to index-2.html if no user is found
+            window.location.href = 'index-2.html';
+        } else {
+            // Populate user data for desktop navbar
+            document.getElementById('user-avatar').src = user.image;
+            document.getElementById('user-avatar').alt = user.username;
+            document.getElementById('username').textContent = user.username;
+
+            // Populate user data for mobile navbar
+            document.getElementById('user-avatar-mobile').src = user.image;
+            document.getElementById('user-avatar-mobile').alt = user.username;
+            document.getElementById('username-mobile').textContent = user.username;
+
+            // Logout functionality for desktop
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                localStorage.removeItem('user');
+                window.location.href = 'index-2.html'; // Redirect to index-2.html
+            });
+
+            // Logout functionality for mobile
+            document.getElementById('logout-btn-mobile').addEventListener('click', () => {
+                localStorage.removeItem('user');
+                window.location.href = 'index-2.html'; // Redirect to index-2.html
+            });
+        }
+    </script>
+
+</body>
+
+</html>
