@@ -81,8 +81,8 @@
                 const response = await axios.post('http://localhost:3100/api/payment/pay', {
                     price: price,
                     description: `Gói ${package}`,
-                    return_url: 'http://yourwebsite.com/success', 
-                    cancel_url: 'http://yourwebsite.com/cancel'
+                    return_url: `${window.location.origin}/success.html`,
+                    cancel_url: `${window.location.origin}/cancel.html`
                 });
                 window.location.href = response.data.approvalUrl; 
             } catch (error) {
