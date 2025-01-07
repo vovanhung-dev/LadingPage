@@ -82,7 +82,7 @@
         // Hiển thị chi tiết gói và tổng chi phí
         let price = package === 'free' ? 1 : package === 'standard' ? 12 : package === 'enterprise' ? 20 : 0;
         document.getElementById('package-details').innerText = `Gói ${package}`;
-        const costMapping = { 0: 0, 12: 290000, 20: 490000 };
+        const costMapping = { 0: 1, 12: 290000, 20: 490000 };
         document.getElementById('total-cost').innerText = `${costMapping[price].toLocaleString()} VNĐ`;
 
         document.getElementById('pay-button').addEventListener('click', async () => {

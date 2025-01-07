@@ -486,22 +486,22 @@
         }
 
         function displayPackages(packages) {
-    const pricingSection = document.getElementById('pricing');
-    const highestPricePackage = packages.reduce((max, pkg) => pkg.price > max.price ? pkg : max, packages[0]);
-    const packageDiv = document.createElement('div');
-    packageDiv.innerHTML = `
-        <div class="rounded-lg shadow-xl relative mb-6 bg-white">
-            <div class="rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center py-8 px-6">
-                <h5 class="text-lg font-bold uppercase tracking-wide">${highestPricePackage.name}</h5>
-                <h1 class="text-5xl font-extrabold my-4">${highestPricePackage.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
-                    <span class="text-lg font-medium text-blue-200">/Năm</span>
-                </h1>
-                <p class="text-base font-light">Bạn đang đăng ký ở gói <span class="font-semibold">${highestPricePackage.name}</span></p>
-            </div>
-        </div>
-    `;
-    pricingSection.insertBefore(packageDiv, pricingSection.firstChild);
-}
+            const pricingSection = document.getElementById('pricing');
+            const highestPricePackage = packages.reduce((max, pkg) => pkg.price > max.price ? pkg : max, packages[0]);
+            const packageDiv = document.createElement('div');
+            packageDiv.innerHTML = `
+                <div class="rounded-lg shadow-xl relative mb-6 bg-white">
+                    <div class="rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center py-8 px-6">
+                        <h5 class="text-lg font-bold uppercase tracking-wide">${highestPricePackage.name}</h5>
+                        <h1 class="text-5xl font-extrabold my-4">${highestPricePackage.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
+                            <span class="text-lg font-medium text-blue-200">/Năm</span>
+                        </h1>
+                        <p class="text-base font-light">Bạn đang đăng ký ở gói <span class="font-semibold">${highestPricePackage.name}</span></p>
+                    </div>
+                </div>
+            `;
+            pricingSection.insertBefore(packageDiv, pricingSection.firstChild);
+        }
 
     </script>
 
